@@ -33,7 +33,10 @@
       v-else
       v-for="result in info"
     >
-      {{ result.Name }}:{{ result.Type }}:{{ result.wUrl }}:{{ result.yUrl }}
+      <h2>{{ result.Name }}</h2><h3>{{ result.Type }}</h3><a :href="result.wUrl"> Wikipedia </a>
+      <div v-if="result.yUrl">
+      <iframe v-bind:src="result.yUrl" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+      </div>
     </div>
   </section>
   </div>
