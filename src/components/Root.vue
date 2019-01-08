@@ -1,6 +1,24 @@
 <template>
   <div class="Search">
     <h1>{{ msg }}</h1>
+    <input type="radio" id="all" value="" v-model="picked">
+      <label for="all">all</label>
+      <br>
+    <input type="radio" id="music" value="music" v-model="picked">
+      <label for="music">music</label>
+      <br>
+    <input type="radio" id="movies" value="movies" v-model="picked">
+      <label for="movies">movies</label>
+      <br>
+    <input type="radio" id="shows" value="shows" v-model="picked">
+      <label for="shows">shows</label>
+      <br>
+    <input type="radio" id="books" value="books" v-model="picked">
+      <label for="books">books</label>
+      <br>
+    <input type="radio" id="games" value="games" v-model="picked">
+      <label for="games">games</label>
+      <br>
     <div>
       <input type="text" v-model="inputVal">
     </div>
@@ -32,13 +50,15 @@ export default {
       info: null,
       loading: false,
       errored: false,
+      picked: null,
     }
   },
   methods: {
     getRecommendations(){
       let input = this.inputVal.replace(/ /g,"+")
+      let type = this.picked
       axios
-        .get(`https://tastedive.com/api/similar?info=1&k=327710-MediaMot-GQ5SN6GL&q=${input}`)
+        .get(`https://tastedive.com/api/similar?info=1&k=327710-MediaMot-GQ5SN6GL&q=${input}&type=${type}`)
         .then(response => {
           this.info = response.data.Similar.Results
         })
