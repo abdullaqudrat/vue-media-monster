@@ -25,3 +25,9 @@ npm run build
 * Vue
 * Axios 
 * Express
+
+----
+<img width="1435" alt="screen shot 1" src="https://user-images.githubusercontent.com/38393041/50886990-2c015480-13af-11e9-8aca-457833311a55.png">
+<img width="1435" alt="screen shot 2" src="https://user-images.githubusercontent.com/38393041/50886991-2e63ae80-13af-11e9-887c-ebb62061cc59.png">
+<img width="1326" alt="screen shot 3" src="https://user-images.githubusercontent.com/38393041/50886995-302d7200-13af-11e9-89dc-29ce99d9817b.png">
+<img width="1389" alt="screen shot 4" src="https://user-images.githubusercontent.com/38393041/50886997-328fcc00-13af-11e9-8fee-b642d340fecd.png">
