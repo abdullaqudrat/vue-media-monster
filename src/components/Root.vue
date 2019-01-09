@@ -1,7 +1,7 @@
 <template>
   <div class="Search">
-    <h1>Media Motion</h1>
-    <h2>{{ msg }}</h2>
+    <h1>{{ title }}</h1>
+    <h2>{{ slogan }}</h2>
     <div class="selection">
       <input type="radio" id="all" value="" v-model="picked">
         <label for="all">all</label>
@@ -33,7 +33,7 @@
         <br>
     </div>
     <div>
-      <input type="text" class="search-bar" v-model="inputVal">
+      <input type="text" class="search-bar" placeholder="enter titles, artists, authors here" v-model="inputVal">
     </div>
     <div><button class="search" v-on:click="getRecommendations()">Find Recommendations</button></div>
     <section v-if="errored">
@@ -42,29 +42,48 @@
 
   <section v-else>
     <div v-if="loading">Loading...</div>
-    <div 
+    <div class="cards"
       v-else
       v-for="result in info"
     >
-      <div v-if="result.Type == music">
-        <i class="fas fa-music"></i>
+      <div class="card">
+        <div class="info">
+          <div v-if="result.Type == music">
+            <span style="font-size: 48px; color: Dodgerblue;">
+            <i class="fas fa-music"></i>
+            </span>
+          </div>
+          <div v-if="result.Type == movie">
+           <span style="font-size: 48px; color: Red;">
+            <i class="fas fa-film"></i>
+            </span>
+          </div>
+          <div v-if="result.Type == show">
+            <span style="font-size: 48px; color: Purple;">
+            <i class="fas fa-tv"></i>
+            </span>
+          </div>
+          <div v-if="result.Type == book">
+            <span style="font-size: 48px; color: Green;">
+            <i class="fas fa-book"></i>
+            </span>
+          </div>
+          <div v-if="result.Type == game">
+            <span style="font-size: 48px; color: Grey;">
+            <i class="fas fa-gamepad"></i>
+            </span>
+          </div>
+          <h2>{{ result.Name }}</h2><a :href="result.wUrl"> Wikipedia </a><h4>{{ result.wTeaser }}</h4>
+        </div>
       </div>
-      <div v-if="result.Type == movie">
-        <i class="fas fa-film"></i>
-      </div>
-      <div v-if="result.Type == show">
-        <i class="fas fa-tv"></i>
-      </div>
-      <div v-if="result.Type == book">
-        <i class="fas fa-book"></i>
-      </div>
-      <div v-if="result.Type == game">
-        <i class="fas fa-gamepad"></i>
-      </div>
-      <h2>{{ result.Name }}</h2><a :href="result.wUrl"> Wikipedia </a>
-      <div v-if="result.yUrl">
-      <iframe v-bind:src="result.yUrl" width="560" height="315" frameborder="0" allowfullscreen></iframe>
-      </div>
+      <div class="card">
+
+        <div class="vid">
+          <div v-if="result.yUrl">
+              <iframe v-bind:src="result.yUrl" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        </div>
     </div>
   </section>
   </div>
@@ -76,8 +95,9 @@ export default {
   name: 'Search',
   data () {
     return {
-      msg: 'Search For Media Recommendations Here',
-      inputVal: '',
+      title: "Media Monster",
+      slogan: "Get All Your Media Recommendations Here",
+      inputVal: "",
       info: null,
       loading: false,
       errored: false,
@@ -110,9 +130,19 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+
+h1 {
   font-weight: normal;
+  font-size: 66px;
+  font-family: 'Monoton', cursive;
+  margin-bottom: -10px
 }
+
+h2 {
+  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -147,5 +177,38 @@ input.search-bar:focus {
 
 button.search {
   margin-bottom: 25px;
+  padding: 10px;
+  border-radius: 15px; 
+  background: #42b983;
+  text-decoration-style: solid 
+}
+
+button.search:focus {
+  outline: none;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: auto auto;
+
+}
+.card {
+  height: auto;
+  width: auto;
+  cursor: pointer;
+  align-self: center;
+}
+
+.info {
+  margin: 10px;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 30px;
+}
+
+.vid {
+  margin: 10px;
+  padding: 50px;
+
 }
 </style>
