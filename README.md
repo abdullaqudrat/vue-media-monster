@@ -1,8 +1,8 @@
-# vue-media-motion
+# Media Motion
 
-> A Vue.js project
+> Media Motion is a lightweight media recommendations app built in Vue JS. The app allows users to input their favorite films, tv shows, music, books, and games to get recommendations based on their tastes. The app uses parses the users input and plugs into TasteDive's API to receive media recommendations based on what genre the user chooses. 
 
-## Build Setup
+## Setup
 
 ``` bash
 # install dependencies
@@ -14,8 +14,10 @@ npm run dev
 # build for production with minification
 npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Dependencies
+
+* Vue
+* Axios 
+* Express
