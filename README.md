@@ -1,6 +1,6 @@
-# Media Motion
+# Media Monster
 
-> Media Motion is a lightweight media recommendations app built in Vue JS. The app allows users to input their favorite films, tv shows, music, books, and games to get recommendations based on their tastes. The app parses the users input and plugs into TasteDive's API to receive media recommendations based on what genre the user chooses.
+> Media Monster is a lightweight media recommendations app built in Vue JS. The app allows users to input their favorite films, tv shows, music, books, and games to get recommendations based on their tastes. The app parses the users input and plugs into TasteDive's API to receive media recommendations based on what genre the user chooses.
 
 Powered by TasteDive https://tastedive.com/read/api
 
