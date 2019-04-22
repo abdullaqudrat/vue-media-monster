@@ -4,7 +4,12 @@
 
 Powered by TasteDive https://tastedive.com/read/api
 
-To view the live app, download a CORS extention for your browser and click this link https://damp-plateau-62595.herokuapp.com/
+To view the live app:
+
+1. download a CORS extention for your browser
+..* ext for Chrome - https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en
+2. click this link https://damp-plateau-62595.herokuapp.com/
+3. search for media recommendations by entering your favorite title, artist, etc....
 
 ## Setup
 
