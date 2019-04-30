@@ -6,11 +6,8 @@ Powered by TasteDive https://tastedive.com/read/api
 
 To view the live app:
 
-1. download a CORS extention for your browser if you don't have one
- * ext for Chrome - https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en
-2. click this link https://damp-plateau-62595.herokuapp.com/
-3. Turn on CORS extention
-4. search for media recommendations by entering your favorite title, artist, etc....
+1. click this link https://damp-plateau-62595.herokuapp.com/
+2. search for media recommendations by entering your favorite title, artist, etc....
 
 ## Setup
 
@@ -18,13 +15,15 @@ To view the live app:
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
-
 # build for production with minification
 npm run build
 
+# serve with hot reload at localhost:8080
+npm run dev
 ```
+Then visit local host in browser
+
+http://localhost:8080
 
 ## Dependencies
 
