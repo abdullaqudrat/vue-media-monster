@@ -114,9 +114,10 @@ export default {
       let input = this.inputVal.replace(/ /g,"+")
       let type = this.picked
       axios
-        .get(`https://tastedive.com/api/similar?info=1&k=327710-MediaMot-GQ5SN6GL&q=${input}&type=${type}`)
+        .get(`${'https://cors-anywhere.herokuapp.com/'}https://tastedive.com/api/similar?info=1&k=327710-MediaMot-GQ5SN6GL&q=${input}&type=${type}`)
         .then(response => {
           this.info = response.data.Similar.Results
+          console.log(response.data.Similar.Results)
         })
         .catch(error => {
           console.log(error)
