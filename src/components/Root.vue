@@ -164,8 +164,8 @@ input.search-bar {
   margin: 25px;
   width: 500px;
   height: 25px;
-  border-radius: 30px;
   border-color: none;
+  border-radius: 30px;
   text-align: center;
   font-family: 'Thasadith', sans-serif;
   font-size: 18px;
@@ -200,7 +200,7 @@ button.search:focus {
 }
 
 .info {
-  margin: 10px;
+  margin: 10px 10px 10px 50px;
   padding: 50px;
   background: rgba(255, 255, 255, 0.4);
   border-radius: 30px;
@@ -208,7 +208,7 @@ button.search:focus {
 
 .vid {
   margin: 10px;
-  padding: 50px;
+  padding: 10px;
 
 }
 </style>
