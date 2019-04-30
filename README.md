@@ -11,6 +11,8 @@ To view the live app:
 
 ## Setup
 
+In the command line of the root directory of the project
+
 ``` bash
 # install dependencies
 npm install
